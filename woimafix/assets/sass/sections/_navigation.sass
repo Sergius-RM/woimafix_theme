@@ -1,0 +1,270 @@
+.site-navigation
+    width: 100%
+    .menu-icon
+        display: inline-block
+        width: 54px
+        height: 54px
+        float: left
+        margin-right: 15px
+        background-size: contain
+        background-position: 50% 0%
+        background-repeat: no-repeat
+    a
+        .menu-image
+            display: block
+            width: 60px
+            height: 60px
+            float: left
+    .shop_btn
+        display: inline-block
+        position: relative
+        margin-left: 40px
+        +btn-option
+        &:hover
+            +btn-option-hover
+            cursor: pointer
+        &:hover > a
+            color: $primary-color
+        a
+            color: $light-color
+            font-weight: 600
+            &::after
+                font-family: bootstrap-icons
+                content: "\f138"
+                margin-left: 10px
+                top: 3px
+                position: relative
+            &:hover
+                border-bottom: 0
+                padding-bottom: 0
+                color: $primary-color
+    ul
+        margin-bottom: 0
+        position: relative
+        margin-left: 4em
+        padding-left: 0
+        text-align: center
+        li
+            display: inline-block
+            padding: 5px 15px
+            position: relative
+            margin-right: 10px
+            a
+                text-decoration: none
+                color: $white-color
+                font-family: $proxima-fonts
+                font-size: $f4
+                padding-bottom: 5px
+                &:hover
+                    +link-hover
+                    color: $seconday-color
+                    border-color: $seconday-color
+            a::before
+                content: ""
+                position: absolute
+                top: 100%
+                left: 0
+                width: 100%
+                height: 1px
+                background-color: $seconday-color
+                transform: scaleX(0)
+                transform-origin: left
+                transition: transform 0.2s
+            a:hover::before
+                transform: scaleX(1)
+        .sub-menu
+            text-align: left
+            position: absolute
+            left: 0
+            top: -500px
+            opacity: 0
+            width: max-content
+            background: $seconday-light
+            padding: 30px 15px
+            margin: 0
+            z-index: -1
+            li
+                display: block
+                a
+                    color: $primary-color
+                    display: initial
+                    &:hover
+                        color: $primary-color
+                a::before
+                    content: ""
+                    position: absolute
+                    top: 100%
+                    left: 0
+                    width: 100%
+                    height: 1px
+                    background-color: $primary-color
+                    transform: scaleX(0)
+                    transform-origin: left
+                    transition: transform 0.2s
+                a:hover::before
+                    transform: scaleX(1)
+        > .menu-item-has-children
+            .sub-menu
+                .menu-item-has-children
+                    &::after
+                        content: ''
+        > .menu-item-has-children
+            &:hover
+                .sub-menu
+                    top: 30px
+                    opacity: 1
+                    transition: 0.3s
+                    z-index: 2
+
+.one_column
+    .sub-menu
+        column-count: 1 !important
+        gap: 0px !important
+.navbar-toggler-icon
+    position: absolute
+    right: 40px
+    top: 20px
+    z-index: 999
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+
+.mob_menu
+    +.show
+    background: #000000e6
+    padding: 40px
+    width: 100%
+    top: 0
+    position: fixed
+    height: 100%
+    overflow: scroll
+    padding-top: 100px
+    .site-navigation
+    ul
+        padding: 0
+        li
+            display: block
+            padding: 15px 15px
+            list-style: none
+            position: relative
+            a
+                text-decoration: none
+                color: #fff
+                font-family: $font-texts
+                width: 100%
+                font-size: 18px
+                font-weight: 600
+                .description
+                    display: block
+                    color:#808080
+                    margin-top: 10px
+                    font-size: $f6
+                    line-height: $lh-p
+                    font-weight: 300
+                    font-family: Verdana, Tahoma, sans-serif
+        .menu-item-has-children
+           > a
+                // color: $primary-color
+        .shop_btn
+            float: none
+            width: fit-content
+            margin: 0 auto
+            background: #fff
+            padding: 15px 30px
+            font-weight: 600
+            background: $primary-color
+            border-radius: 30px
+            a
+                color: $light-color
+        .sub-menu
+            margin-left: 15px
+            li
+                a
+                    font-weight: 400
+                    font-size: 16px
+        .mega_menu
+            a
+                color: $light-color
+            .menu-item-has-children
+                &::before
+                        content: none
+                > a
+                    color: $primary-color
+                    line-height: 40px
+                    font-size: 18px
+                    font-weight: 600
+
+.mob_menu
+    .menu-main-menu-container
+        .menu
+            li
+                width: fit-content
+                position: relative
+    .menu > .menu-item-has-children::after
+        content: '\F282'
+        width: 20px
+        height: 20px
+        display: block
+        font-family: bootstrap-icons
+        float: right
+        transition: 0.5s
+        margin-left: 10px
+        color: #fff
+        top: 14px
+        position: absolute !important
+        left: 25vh
+        z-index: 9999
+        cursor: pointer
+    .menu > .menu-item-has-children:hover::after
+        transition: 0.3s
+        transform: rotateX(-180deg)
+        content: '\F282'
+        color: #fff
+        width: 20px
+        height: 20px
+        display: block
+        font-family: bootstrap-icons
+        position: relative
+        left: 25vh
+        cursor: pointer
+    .menu > .menu-item-has-children .menu-trigger
+        width: 20px
+        height: 20px
+        display: block
+        float: right
+        margin-left: 10px
+        top: 14px
+        position: absolute !important
+        left: 25vh
+        z-index: 99999
+        cursor: pointer
+.pagination
+    margin-top: 30px
+    .nav-links
+        .page-numbers
+            color: #333
+            text-decoration: none
+            margin-right: 15px
+            font-size: 16px
+            &:hover
+                color: $primary-color
+            .current
+                color: $primary-color
+
+.header_search
+    form
+        display: flex
+        align-items: center
+        input[type=search]
+            padding: 5px 20px
+            padding-right: 40px
+            border: 0
+            border-radius: 20px
+            font-size: 14px
+        input[type=submit]
+            width: 18px
+            height: 18px
+            position: absolute
+            right: 45px
+            font-size: 0
+            background: url(/wp-content/themes/woimafix/assets/images/search.png) 50% 50%
+            background-size: cover
+            border: 0

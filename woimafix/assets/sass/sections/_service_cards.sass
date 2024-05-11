@@ -1,0 +1,58 @@
+.service_cards_section
+    margin-bottom: 150px
+    h2
+        margin-bottom: 50px
+        color: $base-color
+    h2.title_color_scheme
+        .first-word
+            color: $third-main
+        .third-word
+            color: $primary-color
+    .service_card_wrap
+        transition: 0.2s
+        display: flex
+        flex-direction: column
+    h3
+        color: $primary-dark
+    .service_card_content
+        margin-bottom: 20px
+        font-size: 20px
+        line-height: 26px
+        font-family: $hanken-fonts
+        font-weight: 500
+        font-style: italic
+    .service_cards_item
+        position: relative
+        margin-bottom: 30px
+        .service_card_icon
+            overflow: hidden
+            position: relative
+            margin-bottom: 25px
+            img
+                width: 100%
+                height: 280px
+                margin-bottom: 0
+                object-fit: cover
+    .read_more
+        display: block
+        color: $base-color
+        font-family: $font-texts
+        font-weight: 700
+        background: none
+        text-decoration: none
+        transition: 0.2s
+        &:hover
+            color: $btn-hover
+            transition: 0.2s
+
+    :not(:root:root) .equal-height
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        flex-wrap: wrap
+
+    :not(:root:root) .equal-height > *
+        -webkit-box-flex: 1
+        -ms-flex: 1
+        flex: 1
+        margin: 0

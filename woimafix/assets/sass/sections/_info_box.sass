@@ -1,0 +1,83 @@
+.info_box_section
+    position: relative
+    margin-bottom: 120px
+    .container-fluid
+        padding: 0
+        background-color: #305032
+        filter: brightness(120%)
+        > .container
+            padding-top: 30px
+            padding-bottom: 30px
+    .info_box_two_columns
+        z-index: 1
+        position: relative
+        .statements_image
+            position: relative
+        img
+            width: 100%
+            max-height: 600px
+            object-fit: contain
+        .statements_content
+            z-index: 1
+            h2
+                font-size: $f2
+                line-height: $lh-2
+                color: $light-color
+                margin-bottom: 40px
+            h2.pink_scheme
+                color: $seconday-color
+                .second-word
+                    color: $third-main
+            h2.violet_scheme
+                color: $white-color
+                .second-word
+                    color: $seconday-color
+                .fourth-word
+                    color: $primary-color
+            .content
+                margin-bottom: 30px
+                padding-right: 0
+                font-family: $hanken-fonts
+                font-weight: 400
+                font-size: 22px
+                line-height: 28px
+                color: $light-color
+                p
+                    font-family: $hanken-fonts
+                    font-weight: 400
+                    font-size: 22px
+                    line-height: 28px
+                    color: $light-color
+            .cta_btn
+                +cta-btn
+                &:hover
+                    background: $btn-hover
+                    transition: 0.2s
+        .statements_content.right_side
+            text-align: left
+            order: 2 !important
+        .right_side
+            .content
+                padding-right: 40%
+                padding-left: 0
+    .features_list
+        padding: 100px 0
+        padding-left: 3vw
+        display: flex
+        flex-direction: column
+        gap: 30px
+    .info_box_features_icon
+        display: flex
+        align-items: center
+        h3
+            font-size: $f3
+            line-height: $lh-3
+            color: $white-color
+            margin-left: 30px
+            font-weight: 300
+        img
+            margin-bottom: 25px
+            width: 85px
+            height: 85px
+        p
+            color: $white-color

@@ -1,0 +1,85 @@
+.service_search_area
+    margin-bottom: 150px
+    h2
+        margin-bottom: 30px
+    a
+        text-decoration: none
+        color: $base-color
+    .service_provider_search
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+        gap: 20px
+        img
+            border-radius: 50%
+            object-fit: cover
+            width: 125px
+            height: 125px
+    .provider_contact_info
+        font-size: $f7
+        font-family: $font-texts
+        color: $grey-70
+        i
+            color: $primary-color
+            margin-right: 10px
+        a
+            font-size: $f7
+            color: $grey-70
+            font-family: $font-texts
+            text-decoration: none
+            display: block
+            line-height: 16px
+            margin-bottom: 10px
+            &:hover
+                color: $btn-hover
+                i
+                    color: $btn-hover
+
+    .map_coordinates
+        overflow: hidden
+        height: 85vh
+        .map
+            height: calc(100% + 20px)
+            margin-bottom: -20px
+
+    .provider_map_popup
+        display: flex
+        align-items: center
+        img
+            width: 50px
+            height: 50px
+            border-radius: 50%
+            margin-right: 10px
+            object-fit: cover
+    .leaflet-popup-content
+        margin: 12px 10px !important
+
+.services_searchform_area
+    .services_search_form
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 20px
+        input[type=text]
+            padding: 5px 20px
+            padding-right: 40px
+            border: 0
+            border-radius: 20px
+            font-size: 14px
+            background: url(/wp-content/themes/woimafix/assets/images/search.png) 95% 50% no-repeat
+            background-size: 20px
+            background-color: #fff
+            width: 100%
+            max-width: 300px
+        select
+            padding: 10px 20px
+            border: 0
+            border-radius: 20px
+            font-size: 14px
+            line-height: 20px
+            color: #828279
+            width: 100%
+            max-width: 300px
+    .cta_btn
+        padding: 10px 30px
+        word-spacing: 0.5em

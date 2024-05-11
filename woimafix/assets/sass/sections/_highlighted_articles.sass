@@ -1,0 +1,99 @@
+.highlighted_articles
+    margin-top: 50px
+    margin-bottom: 100px
+    position: relative
+    h2
+        font-size: $h3-size
+        line-height: $lh-2
+        margin-bottom: 30px
+    .more_posts
+        text-decoration: none
+        color: $primary-color
+        margin-left: 50px
+        margin-bottom: 30px
+        font-family: 'Brother 1816'
+        font-weight: 700
+        width: fit-content
+        font-size: 16px
+        &::after
+            content: '\F138'
+            color: $primary-color
+            display: block
+            font-family: bootstrap-icons
+            float: right
+            margin-left:10px
+        &:hover
+            color: $btn-hover
+            &::after
+                color: $btn-hover
+    .articles-item
+        margin-bottom: 20px
+        a
+            text-decoration: none
+            color: $seconday-color
+        h4
+            font-size: $lh-p
+            line-height: 27px
+            margin-bottom: 30px
+        img
+            width: 100%
+            height: 200px
+            object-fit: cover
+        .entry-date
+            margin-bottom: 10px
+            font-size: 12px
+            line-height: 15px
+        .learn-more
+            font-family: $font-texts
+            font-weight: 700
+            font-size: $f4
+            line-height: 24px
+            color: $primary-color
+            &:hover
+                color: $btn-hover
+        .articles-content
+            padding: 20px 0px
+        .meta_data
+            font-family: $font-texts
+            font-weight: 300
+            font-size: 12px
+            line-height: 15px
+            margin-bottom: 10px
+            display: block
+    .tns-controls
+        button
+            border: 0
+            border-radius: 50%
+            background: $primary-color
+            font-size: 0
+            width: 40px
+            height: 40px
+        [data-controls=prev]
+            position: absolute
+            top: 0%
+            transform: translateY(-50%)
+            z-index: 9
+            right: 20vw
+            &::after
+                content: '\F284'
+                color: #fff
+                display: block
+                font-family: bootstrap-icons
+                font-size: 19px
+                transform: translateY(-50%)
+        [data-controls=next]
+            position: absolute
+            top: 0%
+            transform: translateY(-50%)
+            z-index: 9
+            right: 15vw
+            &::after
+                content: '\F285'
+                color: #fff
+                display: block
+                font-family: bootstrap-icons
+                font-size: 19px
+                transform: translateY(-50%)
+    [data-action=stop],
+    [data-action=start]
+        display: none !important

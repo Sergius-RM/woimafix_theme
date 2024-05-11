@@ -1,0 +1,49 @@
+.slider_loop_section
+    margin-bottom: 150px
+    position: relative
+    .container
+        padding-left: 0
+        padding-right: 0
+        position: relative
+    .slide_item
+        max-height: 650px
+        img
+            width: 100%
+            display: block
+            object-fit: cover
+    .tns-controls
+        button
+            border: 0
+            font-size: 0
+            width: 40px
+            height: 40px
+            background: none
+        [data-controls=prev]
+            position: absolute
+            top: 40%
+            transform: translateY(-50%)
+            z-index: 9
+            left: -40px
+            &::after
+                content: '\F284'
+                color: $primary-color
+                display: block
+                font-family: bootstrap-icons
+                font-size: 32px
+                transform: translateY(-50%)
+        [data-controls=next]
+            position: absolute
+            top: 40%
+            transform: translateY(-50%)
+            z-index: 9
+            right: -40px
+            &::after
+                content: '\F285'
+                color:  $primary-color
+                display: block
+                font-family: bootstrap-icons
+                font-size: 32px
+                transform: translateY(-50%)
+    [data-action=stop],
+    [data-action=start]
+        display: none !important
